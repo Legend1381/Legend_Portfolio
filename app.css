@@ -79,6 +79,10 @@ body {
   cursor: pointer;
 }
 
+.overlay.white {
+    color: white;
+}
+
 @media only screen and (max-width: 1200px) {
   .project-grid {
     grid-template-areas:
@@ -88,21 +92,25 @@ body {
       "insta insta"
       "cup foam"
       "dimensional dimensional";
-      max-width: 95%;
+    max-width: 95%;
   }
 }
 
 @media only screen and (max-width: 750px) {
-    .project-grid {
-      grid-template-areas:
-        "eth eth"
-        "alphabet alphabet"
-        "traveler traveler"
-        "cube astro"
-        "insta insta"
-        "cup cup"
-        "foam foam"
-        "dimensional dimensional";
-        max-width: 95%;
-    }
+  .project-grid {
+    grid-template-areas:
+      "eth eth"
+      "alphabet alphabet"
+      "traveler traveler"
+      "cube astro"
+      "insta insta"
+      "cup cup"
+      "foam foam"
+      "dimensional dimensional";
+    max-width: 95%;
   }
+
+  .project .overlay {
+    font-size: 24px;
+  }
+}
