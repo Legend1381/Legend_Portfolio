@@ -17,11 +17,6 @@ body {
   align-items: center;
 }
 
-.navbar .left h1 {
-  font-size: 32px;
-  font-weight: bold;
-}
-
 .navbar .right img {
   width: 24px;
   height: 24px;
@@ -34,6 +29,23 @@ body {
 
 .navbar .right a:hover {
   text-decoration: underline;
+}
+
+.navbar .left h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.navbar .hamburger {
+    display: none;
+}
+
+.navbar .bars {
+    background-color: black;
+    height: 4px;
+    width: 36px;
+    margin: 3px;
+    border-radius: 10px;
 }
 
 .project-grid {
@@ -118,8 +130,8 @@ body {
 }
 
 .footer p {
-    text-align: center;
-    padding: 64px;
+  text-align: center;
+  padding: 64px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -139,6 +151,27 @@ body {
 }
 
 @media only screen and (max-width: 750px) {
+    .navbar {
+        background-color: white;
+        padding: 16px 24px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+    .navbar .right {
+        display: none;
+    }
+
+    .navbar .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
   .project-grid {
     grid-template-areas:
       "eth eth"
@@ -150,10 +183,14 @@ body {
       "foam foam"
       "dimensional dimensional";
     max-width: 95%;
+    margin-top: 150px;
   }
 
   .project .overlay {
     font-size: 24px;
   }
-}
 
+  .footer p{
+    padding: 32px;
+  }
+}
