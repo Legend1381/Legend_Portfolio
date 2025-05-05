@@ -2,6 +2,38 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 64px 0;
+}
+
+.navbar .right {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .left h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.navbar .right img {
+    width: 24px;
+    height: 24px;
+}
+
+.navbar .right a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar .right a:hover{
+    text-decoration: underline;
+}
+
 .project-grid {
   display: grid;
   grid-template-areas:
