@@ -194,3 +194,32 @@ body {
     padding: 32px;
   }
 }
+
+@keyframes rotatebar1 {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes fadeBar2 {
+  from {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  to {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+}
+
+@keyframes rotatebar3 {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-45deg);
+  }
+}
