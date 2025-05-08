@@ -40,12 +40,48 @@ body {
     display: none;
 }
 
-.navbar .bars {
+.navbar .bar1,.bar2,.bar3 {
     background-color: black;
     height: 4px;
     width: 36px;
     margin: 3px;
     border-radius: 10px;
+}
+
+.mobileNav {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(15px);
+  width: 80px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: -160px;
+  padding: 16px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.mobileNav img {
+  width: 24px;
+  height: 24px;
+}
+
+.mobileNav a {
+  text-decoration: none;
+  color: black;
+  margin: 16px;
+}
+
+.mobileNav a:hover {
+  text-decoration: underline;
+}
+
+.openDrawer {
+  transform: translateX(-160px);
 }
 
 .project-grid {
@@ -152,7 +188,9 @@ body {
 
 @media only screen and (max-width: 750px) {
     .navbar {
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(15px);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         padding: 16px 24px;
         width: 100%;
         max-width: 100%;
@@ -160,7 +198,7 @@ body {
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 2;
+        z-index: 3;
     }
     .navbar .right {
         display: none;
@@ -195,31 +233,41 @@ body {
   }
 }
 
-@keyframes rotatebar1 {
+.animateBar1{
+  animation: rotateBar1 1s forwards;
+}
+
+.animateBar2{
+  animation: fadeBar2 1s forwards;
+}
+
+.animateBar3{
+  animation: rotateBar3 1s forwards;
+}
+
+@keyframes rotateBar1 {
   from {
     transform: rotate(0);
   }
   to {
-    transform: rotate(45deg);
+    transform: rotate(45deg) translate(4px, 10px);
   }
 }
 
 @keyframes fadeBar2 {
   from {
     transform: scaleX(1);
-    opacity: 1;
   }
   to {
     transform: scaleX(0);
-    opacity: 0;
   }
 }
 
-@keyframes rotatebar3 {
+@keyframes rotateBar3 {
   from {
     transform: rotate(0);
   }
   to {
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) translate(4px, -10px);
   }
 }
