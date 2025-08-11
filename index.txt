@@ -2,8 +2,8 @@ vCard - Personal Portfolio
 
 # sidebar
 
-alt = Richard hanrick
-Richard hanrick
+alt = Mostafa Nazari
+Mostafa Nazari
 Web developer
 
 Show Contacts
