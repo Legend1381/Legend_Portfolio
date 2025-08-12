@@ -1088,6 +1088,10 @@ main {
   opacity: 0;
   z-index: 1;
   transition: var(--transition-1);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
 }
 
 .project-item > a:hover .project-item-icon-box {
@@ -1369,9 +1373,8 @@ textarea.form-input::-webkit-resizer {
    * #PORTFOLIO, BLOG 
    */
 
-  .project-img,
-  .blog-banner-box {
-    height: auto;
+  .project-img {
+    height: 200px;
   }
 }
 
