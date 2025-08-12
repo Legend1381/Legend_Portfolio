@@ -57,7 +57,7 @@
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 0%, 98%);
   --orange-yellow-crayola: hsl(190.9, 98.1%, 41.8%);
-  --vegas-gold: hsl(45, 54%, 58%);
+  --vegas-gold: hsl(190.9, 98.1%, 41.8%);
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
@@ -346,7 +346,7 @@ main {
   position: relative;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: start;
   gap: 15px;
 }
 
@@ -365,7 +365,12 @@ main {
 .info-content .nickname {
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 10px;
-  text-align: center;
+}
+
+.info-content .titles-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .info-content .title {
@@ -1361,6 +1366,12 @@ textarea.form-input::-webkit-resizer {
  */
 
 @media (min-width: 450px) {
+
+  /* Sidebar */
+
+  .info-content .nickname {
+    text-align: left;
+  }
   /**
    * client
    */
@@ -1735,6 +1746,10 @@ textarea.form-input::-webkit-resizer {
    * SIDEBAR
    */
 
+   .sidebar-info {
+    align-items: center;
+   }
+
   .contacts-list {
     grid-template-columns: 1fr 1fr;
     gap: 30px 15px;
@@ -2019,8 +2034,12 @@ textarea.form-input::-webkit-resizer {
     text-align: center;
   }
 
+  .info-content .nickname {
+    text-align: center;
+  }
+
   .info-content .title {
-    margin: 10px auto;
+    margin: auto;
   }
 
   .info_more-btn {
