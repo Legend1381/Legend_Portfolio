@@ -339,7 +339,7 @@ main {
 }
 
 .sidebar.active {
-  max-height: 405px;
+  max-height: max-content;
 }
 
 .sidebar-info {
